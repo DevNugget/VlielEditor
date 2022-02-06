@@ -1,6 +1,8 @@
 # VlielEditor
 Official Text Editor for Vielin
 
+![image](https://user-images.githubusercontent.com/84568105/152689908-c77085ce-381b-484d-aa0a-927cda95a99c.png)
+
 # Requirements to Build
 - Godot Game Engine (v3.4 onwards)
 
