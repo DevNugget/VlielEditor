@@ -1,0 +1,339 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://JetBrainsMono-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://TextEditColoring.gd" type="Script" id=2]
+[ext_resource path="res://Snippet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Lucap.gd" type="Script" id=4]
+[ext_resource path="res://iosevka-medium.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://iosevka-regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+outline_color = Color( 0.901961, 0.901961, 0.941176, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0812988, 0.0918376, 0.144531, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.45098, 0.788235, 0.211765, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.619608, 0.584314, 0.780392, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.619608, 0.584314, 0.780392, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.45098, 0.788235, 0.211765, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=7]
+size = 24
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 1 )
+
+[node name="Lucap" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -40.0
+custom_colors/member_variable_color = Color( 0.894118, 0.894118, 0.937255, 1 )
+custom_colors/function_color = Color( 0.894118, 0.894118, 0.937255, 1 )
+custom_colors/caret_color = Color( 1, 0.866667, 0.2, 1 )
+custom_colors/font_color = Color( 0.894118, 0.894118, 0.937255, 1 )
+custom_colors/line_number_color = Color( 0.894118, 0.894118, 0.937255, 1 )
+custom_colors/background_color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+custom_colors/number_color = Color( 0.894118, 0.894118, 0.937255, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 1 )
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+caret_block_mode = true
+caret_blink = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -512.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="Menu" instance=ExtResource( 3 )]
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+size_flags_vertical = 1
+text = "LCBL Code Snippets"
+min_height = 25
+
+[node name="PACKSnippet" parent="Menu" instance=ExtResource( 3 )]
+margin_top = 29.0
+margin_bottom = 164.0
+text = "Snippet: PACK
+Code: ~PACK~[lib]~FINLN~"
+ins_text = "~PACK~~FINLN~"
+call_back = 6
+
+[node name="PUSHSnippet" parent="Menu" instance=ExtResource( 3 )]
+margin_top = 168.0
+margin_bottom = 304.0
+text = "Snippet: PUSH
+Code: ~PUSH~[print]~FINLN~"
+ins_text = "~PUSH~~FINLN~"
+call_back = 6
+
+[node name="contextSinppet" parent="Menu" instance=ExtResource( 3 )]
+margin_top = 308.0
+margin_bottom = 444.0
+text = "Snippet: context
+Code: ~context~[namespace]~[b]~~[/b]~"
+ins_text = "~context~~[b]~~[/b]~"
+call_back = 9
+
+[node name="MainSnippet" parent="Menu" instance=ExtResource( 3 )]
+margin_top = 448.0
+text = "Snippet: Main Function
+Code: ~pub~stat~ret~FUNC~Main~[p]~sta~[/p]~[b]~~[/b]~"
+ins_text = "~pub~stat~ret~FUNC~Main~[p]~sta~[/p]~[b]~
+
+~[/b]~"
+lineadd = 1
+
+[node name="Snippet" parent="Menu" instance=ExtResource( 3 )]
+text = "Snippet: sector
+Code: ~sector~[class_name]~[b]~~[/b]~"
+ins_text = "~sector~~[b]~~[/b]~"
+call_back = 8
+
+[node name="Save" type="Button" parent="."]
+visible = false
+margin_left = 4.0
+margin_top = 566.0
+margin_right = 69.0
+margin_bottom = 593.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barx" type="Panel" parent="."]
+margin_left = 140.0
+margin_top = 566.0
+margin_right = 461.0
+margin_bottom = 593.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barx4" type="Panel" parent="."]
+margin_left = -184.0
+margin_top = 566.0
+margin_right = 137.0
+margin_bottom = 593.0
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barx2" type="Panel" parent="."]
+margin_left = 464.0
+margin_top = 566.0
+margin_right = 778.0
+margin_bottom = 593.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barx3" type="Panel" parent="."]
+margin_left = 781.0
+margin_top = 566.0
+margin_right = 1286.0
+margin_bottom = 593.0
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bar" type="ColorRect" parent="."]
+visible = false
+margin_left = 138.0
+margin_top = 566.0
+margin_right = 1415.0
+margin_bottom = 593.0
+color = Color( 0.45098, 0.788235, 0.211765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Col" type="RichTextLabel" parent="."]
+margin_left = 146.0
+margin_top = 564.0
+margin_right = 423.0
+margin_bottom = 634.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "COL:     ROW:    "
+text = "COL:     ROW:    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OS" type="RichTextLabel" parent="."]
+margin_left = 3.0
+margin_top = 564.0
+margin_right = 280.0
+margin_bottom = 634.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "BINBOWS--"
+text = "BINBOWS--"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="RichTextLabel" parent="."]
+margin_left = 791.0
+margin_top = 564.0
+margin_right = 1043.0
+margin_bottom = 651.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = " SYS TIME: 00:00"
+text = " SYS TIME: 00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Keylog" type="RichTextLabel" parent="."]
+margin_left = 472.0
+margin_top = 564.0
+margin_right = 840.0
+margin_bottom = 602.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "KEY:   "
+text = "KEY:   "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Open" type="Button" parent="."]
+visible = false
+margin_left = 71.0
+margin_top = 566.0
+margin_right = 136.0
+margin_bottom = 593.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
+text = "Open"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+margin_left = 103.0
+margin_top = 51.0
+margin_right = 912.0
+margin_bottom = 506.0
+rect_min_size = Vector2( 150, 52.5 )
+access = 2
+current_dir = "/Users/prodo/Downloads/preflin/Lucap"
+current_path = "/Users/prodo/Downloads/preflin/Lucap/"
+
+[node name="OpenDialog" type="FileDialog" parent="."]
+margin_left = 96.0
+margin_top = 37.0
+margin_right = 936.0
+margin_bottom = 524.0
+rect_min_size = Vector2( 150, 52.5 )
+window_title = "Open a File"
+mode = 0
+access = 2
+current_dir = "/Users/prodo/Downloads/preflin/Lucap"
+current_file = "Documents"
+current_path = "/Users/prodo/Downloads/preflin/Lucap/Documents"
+
+[connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Open" to="." method="_on_Open_pressed"]
+[connection signal="file_selected" from="SaveDialog" to="." method="_on_SaveDialog_file_selected"]
+[connection signal="file_selected" from="OpenDialog" to="." method="_on_OpenDialog_file_selected"]
