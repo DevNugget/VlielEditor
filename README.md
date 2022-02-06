@@ -3,6 +3,10 @@ Official Text Editor for Vielin
 
 ![image](https://user-images.githubusercontent.com/84568105/152689908-c77085ce-381b-484d-aa0a-927cda95a99c.png)
 
+# Important Keybinds
+- Control + O to open file (Always open a file since the save function only saves the opened path)
+- Control + S to save file
+
 # Requirements to Build
 - Godot Game Engine (v3.4 onwards)
 
